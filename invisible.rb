@@ -19,10 +19,10 @@ visit '/CalendlyQA/full/KKPQLmV'
 
 page.driver.browser.switch_to.frame 'result'
 
-page.fill_in('number', with: '2')
+page.fill_in('number', with: '1')
 
 page.click_on('Play')
 
 within('#table') do
-  expect(all('tr').count).to_not eq(2)
+  expect(all('tr').count).to_not eq(1)
 end
